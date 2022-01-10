@@ -38,10 +38,14 @@ struct ServiceListSheet: View {
   var body: some View {
     NavigationView {
       VStack {
-        List {
-          ForEach(sharingServices) { service in
-            SharingServiceRow(data: service)
-          }.onDelete(perform: deleteService)
+        if sharingServices.count == 0 {
+          Text("There is no available service yet.")
+        } else {
+          List {
+            ForEach(sharingServices) { service in
+              SharingServiceRow(data: service)
+            }.onDelete(perform: deleteService)
+          }
         }
       }
       .navigationTitle("Sharing Services")

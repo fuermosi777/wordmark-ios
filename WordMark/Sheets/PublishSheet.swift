@@ -10,7 +10,7 @@ import SwiftUI
 struct PublishSheet: View {
   @Environment(\.managedObjectContext) var managedObjectContext
   @Environment(\.dismiss) private var dismiss
-
+  
   let document: WordMarkDocument
   
   @FetchRequest(entity: SharingService.entity(), sortDescriptors: [
@@ -39,13 +39,17 @@ struct PublishSheet: View {
   var body: some View {
     NavigationView {
       VStack {
-        Form {
-          Picker("Select a publish service", selection: $selectedService) {
-            ForEach(sharingServices) { service in
-              SharingServiceRow(data: service)
-                .tag(service as SharingService?)
-            }
-          }.pickerStyle(.inline)
+        if sharingServices.count == 0 {
+          Text("There is no available service yet.")
+        } else {
+          Form {
+            Picker("Select a publish service", selection: $selectedService) {
+              ForEach(sharingServices) { service in
+                SharingServiceRow(data: service)
+                  .tag(service as SharingService?)
+              }
+            }.pickerStyle(.inline)
+          }
         }
         
         NavigationLink(destination: EnterMetadataView(service: selectedService, posts: $posts),
