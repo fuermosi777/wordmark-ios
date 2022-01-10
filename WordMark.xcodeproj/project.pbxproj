@@ -1,0 +1,731 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3F0390A72783BC74005C05D7 /* WordMarkData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F0390A52783BC74005C05D7 /* WordMarkData.xcdatamodeld */; };
+		3F0390A92783BCAE005C05D7 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0390A82783BCAE005C05D7 /* Persistence.swift */; };
+		3F0390AD278403D6005C05D7 /* PublishSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0390AC278403D6005C05D7 /* PublishSheet.swift */; };
+		3F0390AF27840692005C05D7 /* CreateSharingServiceSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0390AE27840692005C05D7 /* CreateSharingServiceSheet.swift */; };
+		3F0390B427841093005C05D7 /* AuthWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0390B327841093005C05D7 /* AuthWebView.swift */; };
+		3F03914E27842949005C05D7 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0390D727842811005C05D7 /* String+Extensions.swift */; };
+		3F03914F27842949005C05D7 /* URLRequest+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0390D827842811005C05D7 /* URLRequest+Extensions.swift */; };
+		3F03915027842949005C05D7 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0390D927842811005C05D7 /* View+Extensions.swift */; };
+		3F03915127842949005C05D7 /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0390DA27842811005C05D7 /* URL+Extensions.swift */; };
+		3F03915227842949005C05D7 /* FocusedValues+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0390DB27842811005C05D7 /* FocusedValues+Extensions.swift */; };
+		3F03915327842949005C05D7 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0390DC27842811005C05D7 /* Date+Extensions.swift */; };
+		3F03915427842949005C05D7 /* SharingProviders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0390DD27842811005C05D7 /* SharingProviders.swift */; };
+		3F03915527842949005C05D7 /* MediumService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0390DF27842811005C05D7 /* MediumService.swift */; };
+		3F03915627842949005C05D7 /* GithubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0390E027842811005C05D7 /* GithubService.swift */; };
+		3F03915727842949005C05D7 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0390E127842811005C05D7 /* APIService.swift */; };
+		3F03915827842949005C05D7 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0390E227842811005C05D7 /* Utils.swift */; };
+		3F03915A278699F3005C05D7 /* SharingServiceRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F039159278699F3005C05D7 /* SharingServiceRow.swift */; };
+		3F03915C27882606005C05D7 /* EnterMetadataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F03915B27882606005C05D7 /* EnterMetadataView.swift */; };
+		3F03915E278BE944005C05D7 /* ServiceListSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F03915D278BE944005C05D7 /* ServiceListSheet.swift */; };
+		3F2303E627839174005523F5 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2303E527839174005523F5 /* Alert.swift */; };
+		3FC596F426DAFDE7000C97BB /* main.bundle.js in Resources */ = {isa = PBXBuildFile; fileRef = 3FC596F226DAFDE7000C97BB /* main.bundle.js */; };
+		3FC596F526DAFDE7000C97BB /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 3FC596F326DAFDE7000C97BB /* index.html */; };
+		3FE1BFCB26DAEF5C006FCE49 /* WordMarkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE1BFCA26DAEF5C006FCE49 /* WordMarkApp.swift */; };
+		3FE1BFCD26DAEF5C006FCE49 /* WordMarkDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE1BFCC26DAEF5C006FCE49 /* WordMarkDocument.swift */; };
+		3FE1BFCF26DAEF5C006FCE49 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE1BFCE26DAEF5C006FCE49 /* ContentView.swift */; };
+		3FE1BFD126DAEF5D006FCE49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FE1BFD026DAEF5D006FCE49 /* Assets.xcassets */; };
+		3FE1BFD426DAEF5D006FCE49 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FE1BFD326DAEF5D006FCE49 /* Preview Assets.xcassets */; };
+		3FE1BFDF26DAEF5D006FCE49 /* WordMarkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE1BFDE26DAEF5D006FCE49 /* WordMarkTests.swift */; };
+		3FE1BFEA26DAEF5D006FCE49 /* WordMarkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE1BFE926DAEF5D006FCE49 /* WordMarkUITests.swift */; };
+		3FE1BFF826DAF33F006FCE49 /* EditorWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE1BFF726DAF33F006FCE49 /* EditorWebView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3FE1BFDB26DAEF5D006FCE49 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3FE1BFBF26DAEF5C006FCE49 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3FE1BFC626DAEF5C006FCE49;
+			remoteInfo = WordMark;
+		};
+		3FE1BFE626DAEF5D006FCE49 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3FE1BFBF26DAEF5C006FCE49 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3FE1BFC626DAEF5C006FCE49;
+			remoteInfo = WordMark;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3F0390A62783BC74005C05D7 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		3F0390A82783BCAE005C05D7 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		3F0390AC278403D6005C05D7 /* PublishSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishSheet.swift; sourceTree = "<group>"; };
+		3F0390AE27840692005C05D7 /* CreateSharingServiceSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSharingServiceSheet.swift; sourceTree = "<group>"; };
+		3F0390B327841093005C05D7 /* AuthWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthWebView.swift; sourceTree = "<group>"; };
+		3F0390D727842811005C05D7 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		3F0390D827842811005C05D7 /* URLRequest+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Extensions.swift"; sourceTree = "<group>"; };
+		3F0390D927842811005C05D7 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
+		3F0390DA27842811005C05D7 /* URL+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
+		3F0390DB27842811005C05D7 /* FocusedValues+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FocusedValues+Extensions.swift"; sourceTree = "<group>"; };
+		3F0390DC27842811005C05D7 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		3F0390DD27842811005C05D7 /* SharingProviders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingProviders.swift; sourceTree = "<group>"; };
+		3F0390DF27842811005C05D7 /* MediumService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumService.swift; sourceTree = "<group>"; };
+		3F0390E027842811005C05D7 /* GithubService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubService.swift; sourceTree = "<group>"; };
+		3F0390E127842811005C05D7 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		3F0390E227842811005C05D7 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		3F039159278699F3005C05D7 /* SharingServiceRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingServiceRow.swift; sourceTree = "<group>"; };
+		3F03915B27882606005C05D7 /* EnterMetadataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterMetadataView.swift; sourceTree = "<group>"; };
+		3F03915D278BE944005C05D7 /* ServiceListSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceListSheet.swift; sourceTree = "<group>"; };
+		3F2303E527839174005523F5 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		3FC596F226DAFDE7000C97BB /* main.bundle.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = main.bundle.js; sourceTree = "<group>"; };
+		3FC596F326DAFDE7000C97BB /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		3FE1BFC726DAEF5C006FCE49 /* WordMark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordMark.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FE1BFCA26DAEF5C006FCE49 /* WordMarkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordMarkApp.swift; sourceTree = "<group>"; };
+		3FE1BFCC26DAEF5C006FCE49 /* WordMarkDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordMarkDocument.swift; sourceTree = "<group>"; };
+		3FE1BFCE26DAEF5C006FCE49 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3FE1BFD026DAEF5D006FCE49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3FE1BFD326DAEF5D006FCE49 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3FE1BFD526DAEF5D006FCE49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FE1BFDA26DAEF5D006FCE49 /* WordMarkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordMarkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FE1BFDE26DAEF5D006FCE49 /* WordMarkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordMarkTests.swift; sourceTree = "<group>"; };
+		3FE1BFE026DAEF5D006FCE49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FE1BFE526DAEF5D006FCE49 /* WordMarkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordMarkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FE1BFE926DAEF5D006FCE49 /* WordMarkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordMarkUITests.swift; sourceTree = "<group>"; };
+		3FE1BFEB26DAEF5D006FCE49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FE1BFF726DAF33F006FCE49 /* EditorWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorWebView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3FE1BFC426DAEF5C006FCE49 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FE1BFD726DAEF5D006FCE49 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FE1BFE226DAEF5D006FCE49 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3F0390B02784069A005C05D7 /* Sheets */ = {
+			isa = PBXGroup;
+			children = (
+				3F0390AC278403D6005C05D7 /* PublishSheet.swift */,
+				3F0390AE27840692005C05D7 /* CreateSharingServiceSheet.swift */,
+				3F03915D278BE944005C05D7 /* ServiceListSheet.swift */,
+			);
+			path = Sheets;
+			sourceTree = "<group>";
+		};
+		3F0390D527842811005C05D7 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				3F0390D627842811005C05D7 /* Extensions */,
+				3F0390DD27842811005C05D7 /* SharingProviders.swift */,
+				3F0390DE27842811005C05D7 /* Services */,
+			);
+			name = Shared;
+			path = "../WordMark-macos/WordMark/Shared";
+			sourceTree = "<group>";
+		};
+		3F0390D627842811005C05D7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3F0390D727842811005C05D7 /* String+Extensions.swift */,
+				3F0390D827842811005C05D7 /* URLRequest+Extensions.swift */,
+				3F0390D927842811005C05D7 /* View+Extensions.swift */,
+				3F0390DA27842811005C05D7 /* URL+Extensions.swift */,
+				3F0390DB27842811005C05D7 /* FocusedValues+Extensions.swift */,
+				3F0390DC27842811005C05D7 /* Date+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3F0390DE27842811005C05D7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3F0390DF27842811005C05D7 /* MediumService.swift */,
+				3F0390E027842811005C05D7 /* GithubService.swift */,
+				3F0390E127842811005C05D7 /* APIService.swift */,
+				3F0390E227842811005C05D7 /* Utils.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		3FE1BFBE26DAEF5C006FCE49 = {
+			isa = PBXGroup;
+			children = (
+				3F0390D527842811005C05D7 /* Shared */,
+				3FE1BFC926DAEF5C006FCE49 /* WordMark */,
+				3FE1BFDD26DAEF5D006FCE49 /* WordMarkTests */,
+				3FE1BFE826DAEF5D006FCE49 /* WordMarkUITests */,
+				3FE1BFC826DAEF5C006FCE49 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3FE1BFC826DAEF5C006FCE49 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3FE1BFC726DAEF5C006FCE49 /* WordMark.app */,
+				3FE1BFDA26DAEF5D006FCE49 /* WordMarkTests.xctest */,
+				3FE1BFE526DAEF5D006FCE49 /* WordMarkUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3FE1BFC926DAEF5C006FCE49 /* WordMark */ = {
+			isa = PBXGroup;
+			children = (
+				3F0390B02784069A005C05D7 /* Sheets */,
+				3FC596F326DAFDE7000C97BB /* index.html */,
+				3FC596F226DAFDE7000C97BB /* main.bundle.js */,
+				3FE1BFCA26DAEF5C006FCE49 /* WordMarkApp.swift */,
+				3F0390A82783BCAE005C05D7 /* Persistence.swift */,
+				3FE1BFCC26DAEF5C006FCE49 /* WordMarkDocument.swift */,
+				3FE1BFCE26DAEF5C006FCE49 /* ContentView.swift */,
+				3FE1BFF726DAF33F006FCE49 /* EditorWebView.swift */,
+				3FE1BFD026DAEF5D006FCE49 /* Assets.xcassets */,
+				3FE1BFD526DAEF5D006FCE49 /* Info.plist */,
+				3FE1BFD226DAEF5D006FCE49 /* Preview Content */,
+				3F2303E527839174005523F5 /* Alert.swift */,
+				3F0390A52783BC74005C05D7 /* WordMarkData.xcdatamodeld */,
+				3F0390B327841093005C05D7 /* AuthWebView.swift */,
+				3F039159278699F3005C05D7 /* SharingServiceRow.swift */,
+				3F03915B27882606005C05D7 /* EnterMetadataView.swift */,
+			);
+			path = WordMark;
+			sourceTree = "<group>";
+		};
+		3FE1BFD226DAEF5D006FCE49 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				3FE1BFD326DAEF5D006FCE49 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3FE1BFDD26DAEF5D006FCE49 /* WordMarkTests */ = {
+			isa = PBXGroup;
+			children = (
+				3FE1BFDE26DAEF5D006FCE49 /* WordMarkTests.swift */,
+				3FE1BFE026DAEF5D006FCE49 /* Info.plist */,
+			);
+			path = WordMarkTests;
+			sourceTree = "<group>";
+		};
+		3FE1BFE826DAEF5D006FCE49 /* WordMarkUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3FE1BFE926DAEF5D006FCE49 /* WordMarkUITests.swift */,
+				3FE1BFEB26DAEF5D006FCE49 /* Info.plist */,
+			);
+			path = WordMarkUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3FE1BFC626DAEF5C006FCE49 /* WordMark */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FE1BFEE26DAEF5D006FCE49 /* Build configuration list for PBXNativeTarget "WordMark" */;
+			buildPhases = (
+				3FE1BFC326DAEF5C006FCE49 /* Sources */,
+				3FE1BFC426DAEF5C006FCE49 /* Frameworks */,
+				3FE1BFC526DAEF5C006FCE49 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WordMark;
+			productName = WordMark;
+			productReference = 3FE1BFC726DAEF5C006FCE49 /* WordMark.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3FE1BFD926DAEF5D006FCE49 /* WordMarkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FE1BFF126DAEF5D006FCE49 /* Build configuration list for PBXNativeTarget "WordMarkTests" */;
+			buildPhases = (
+				3FE1BFD626DAEF5D006FCE49 /* Sources */,
+				3FE1BFD726DAEF5D006FCE49 /* Frameworks */,
+				3FE1BFD826DAEF5D006FCE49 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3FE1BFDC26DAEF5D006FCE49 /* PBXTargetDependency */,
+			);
+			name = WordMarkTests;
+			productName = WordMarkTests;
+			productReference = 3FE1BFDA26DAEF5D006FCE49 /* WordMarkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3FE1BFE426DAEF5D006FCE49 /* WordMarkUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FE1BFF426DAEF5D006FCE49 /* Build configuration list for PBXNativeTarget "WordMarkUITests" */;
+			buildPhases = (
+				3FE1BFE126DAEF5D006FCE49 /* Sources */,
+				3FE1BFE226DAEF5D006FCE49 /* Frameworks */,
+				3FE1BFE326DAEF5D006FCE49 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3FE1BFE726DAEF5D006FCE49 /* PBXTargetDependency */,
+			);
+			name = WordMarkUITests;
+			productName = WordMarkUITests;
+			productReference = 3FE1BFE526DAEF5D006FCE49 /* WordMarkUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3FE1BFBF26DAEF5C006FCE49 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					3FE1BFC626DAEF5C006FCE49 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					3FE1BFD926DAEF5D006FCE49 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 3FE1BFC626DAEF5C006FCE49;
+					};
+					3FE1BFE426DAEF5D006FCE49 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 3FE1BFC626DAEF5C006FCE49;
+					};
+				};
+			};
+			buildConfigurationList = 3FE1BFC226DAEF5C006FCE49 /* Build configuration list for PBXProject "WordMark" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3FE1BFBE26DAEF5C006FCE49;
+			productRefGroup = 3FE1BFC826DAEF5C006FCE49 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3FE1BFC626DAEF5C006FCE49 /* WordMark */,
+				3FE1BFD926DAEF5D006FCE49 /* WordMarkTests */,
+				3FE1BFE426DAEF5D006FCE49 /* WordMarkUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3FE1BFC526DAEF5C006FCE49 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FE1BFD426DAEF5D006FCE49 /* Preview Assets.xcassets in Resources */,
+				3FC596F526DAFDE7000C97BB /* index.html in Resources */,
+				3FE1BFD126DAEF5D006FCE49 /* Assets.xcassets in Resources */,
+				3FC596F426DAFDE7000C97BB /* main.bundle.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FE1BFD826DAEF5D006FCE49 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FE1BFE326DAEF5D006FCE49 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3FE1BFC326DAEF5C006FCE49 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F03914E27842949005C05D7 /* String+Extensions.swift in Sources */,
+				3F03914F27842949005C05D7 /* URLRequest+Extensions.swift in Sources */,
+				3F03915027842949005C05D7 /* View+Extensions.swift in Sources */,
+				3F03915127842949005C05D7 /* URL+Extensions.swift in Sources */,
+				3F03915227842949005C05D7 /* FocusedValues+Extensions.swift in Sources */,
+				3F03915327842949005C05D7 /* Date+Extensions.swift in Sources */,
+				3F03915427842949005C05D7 /* SharingProviders.swift in Sources */,
+				3F03915C27882606005C05D7 /* EnterMetadataView.swift in Sources */,
+				3F03915A278699F3005C05D7 /* SharingServiceRow.swift in Sources */,
+				3F03915527842949005C05D7 /* MediumService.swift in Sources */,
+				3F03915627842949005C05D7 /* GithubService.swift in Sources */,
+				3F03915727842949005C05D7 /* APIService.swift in Sources */,
+				3F03915827842949005C05D7 /* Utils.swift in Sources */,
+				3F0390AF27840692005C05D7 /* CreateSharingServiceSheet.swift in Sources */,
+				3F0390B427841093005C05D7 /* AuthWebView.swift in Sources */,
+				3F03915E278BE944005C05D7 /* ServiceListSheet.swift in Sources */,
+				3FE1BFCB26DAEF5C006FCE49 /* WordMarkApp.swift in Sources */,
+				3FE1BFCD26DAEF5C006FCE49 /* WordMarkDocument.swift in Sources */,
+				3FE1BFF826DAF33F006FCE49 /* EditorWebView.swift in Sources */,
+				3F0390A72783BC74005C05D7 /* WordMarkData.xcdatamodeld in Sources */,
+				3F2303E627839174005523F5 /* Alert.swift in Sources */,
+				3FE1BFCF26DAEF5C006FCE49 /* ContentView.swift in Sources */,
+				3F0390A92783BCAE005C05D7 /* Persistence.swift in Sources */,
+				3F0390AD278403D6005C05D7 /* PublishSheet.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FE1BFD626DAEF5D006FCE49 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FE1BFDF26DAEF5D006FCE49 /* WordMarkTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FE1BFE126DAEF5D006FCE49 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FE1BFEA26DAEF5D006FCE49 /* WordMarkUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3FE1BFDC26DAEF5D006FCE49 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3FE1BFC626DAEF5C006FCE49 /* WordMark */;
+			targetProxy = 3FE1BFDB26DAEF5D006FCE49 /* PBXContainerItemProxy */;
+		};
+		3FE1BFE726DAEF5D006FCE49 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3FE1BFC626DAEF5C006FCE49 /* WordMark */;
+			targetProxy = 3FE1BFE626DAEF5D006FCE49 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3FE1BFEC26DAEF5D006FCE49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3FE1BFED26DAEF5D006FCE49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3FE1BFEF26DAEF5D006FCE49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_ASSET_PATHS = "\"WordMark/Preview Content\"";
+				DEVELOPMENT_TEAM = 8ZSXHVA72B;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = WordMark/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wordmarkapp.macos;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3FE1BFF026DAEF5D006FCE49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_ASSET_PATHS = "\"WordMark/Preview Content\"";
+				DEVELOPMENT_TEAM = 8ZSXHVA72B;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = WordMark/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wordmarkapp.macos;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3FE1BFF226DAEF5D006FCE49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8ZSXHVA72B;
+				INFOPLIST_FILE = WordMarkTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wordmarkapp.WordMarkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WordMark.app/WordMark";
+			};
+			name = Debug;
+		};
+		3FE1BFF326DAEF5D006FCE49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8ZSXHVA72B;
+				INFOPLIST_FILE = WordMarkTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wordmarkapp.WordMarkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WordMark.app/WordMark";
+			};
+			name = Release;
+		};
+		3FE1BFF526DAEF5D006FCE49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8ZSXHVA72B;
+				INFOPLIST_FILE = WordMarkUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wordmarkapp.WordMarkUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WordMark;
+			};
+			name = Debug;
+		};
+		3FE1BFF626DAEF5D006FCE49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8ZSXHVA72B;
+				INFOPLIST_FILE = WordMarkUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wordmarkapp.WordMarkUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WordMark;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3FE1BFC226DAEF5C006FCE49 /* Build configuration list for PBXProject "WordMark" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FE1BFEC26DAEF5D006FCE49 /* Debug */,
+				3FE1BFED26DAEF5D006FCE49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FE1BFEE26DAEF5D006FCE49 /* Build configuration list for PBXNativeTarget "WordMark" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FE1BFEF26DAEF5D006FCE49 /* Debug */,
+				3FE1BFF026DAEF5D006FCE49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FE1BFF126DAEF5D006FCE49 /* Build configuration list for PBXNativeTarget "WordMarkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FE1BFF226DAEF5D006FCE49 /* Debug */,
+				3FE1BFF326DAEF5D006FCE49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FE1BFF426DAEF5D006FCE49 /* Build configuration list for PBXNativeTarget "WordMarkUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FE1BFF526DAEF5D006FCE49 /* Debug */,
+				3FE1BFF626DAEF5D006FCE49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3F0390A52783BC74005C05D7 /* WordMarkData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3F0390A62783BC74005C05D7 /* Model.xcdatamodel */,
+			);
+			currentVersion = 3F0390A62783BC74005C05D7 /* Model.xcdatamodel */;
+			path = WordMarkData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 3FE1BFBF26DAEF5C006FCE49 /* Project object */;
+}
