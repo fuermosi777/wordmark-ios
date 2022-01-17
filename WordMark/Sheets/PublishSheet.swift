@@ -25,7 +25,7 @@ struct PublishSheet: View {
   
   init(document: WordMarkDocument) {
     self.document = document
-    _posts = State(initialValue: (github: GithubPost(content: document.text,
+    _posts = State(initialValue: (github: GithubFile(content: document.text,
                                                      path: "",
                                                      filename: document.filename ?? "Untitled.md",
                                                      commitMessage: "" ,

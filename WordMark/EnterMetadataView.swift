@@ -40,6 +40,7 @@ struct EnterMetadataView: View {
           } catch AppError.notFound {
             publish()
           } catch {
+            presentErrorAlert = true
             errorAlerted = error
           }
         }
