@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Amplitude",
+        "repositoryURL": "https://github.com/amplitude/Amplitude-iOS",
+        "state": {
+          "branch": "main",
+          "revision": "b8a0d51fd414db206050ac83806795a8fab6f447",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

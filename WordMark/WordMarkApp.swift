@@ -11,6 +11,10 @@ import SwiftUI
 struct WordMarkApp: App {
   let persistenceController = PersistenceController.shared
   
+  init() {
+    Logger.shared.appStart()
+  }
+  
   var body: some Scene {
     DocumentGroup(newDocument: WordMarkDocument()) { file in
       ContentView(document: file.$document)
