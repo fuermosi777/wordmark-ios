@@ -9,7 +9,8 @@ import SwiftUI
 
 enum Sheet: Identifiable {
   case publish,
-  serviceList
+  serviceList,
+  settings
   
   var id: Int {
     hashValue
@@ -36,6 +37,10 @@ struct ContentView: View {
                 Button(action: { selectedSheet = .serviceList }) {
                   Label("Sharing Services", systemImage: "globe")
                 }
+                
+                Button(action: { selectedSheet = .settings }) {
+                  Label("Settings", systemImage: "gear")
+                }
               } label: {
                 Image(systemName: "ellipsis.circle")
               }
@@ -46,6 +51,7 @@ struct ContentView: View {
             switch item {
             case .publish: PublishSheet(document: document)
             case .serviceList: ServiceListSheet()
+            case .settings: SettingsSheet()
             }
           }
       }

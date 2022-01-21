@@ -29,6 +29,11 @@
 		3F2303E627839174005523F5 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2303E527839174005523F5 /* Alert.swift */; };
 		3F381ECC2796770000B6DB4F /* Amplitude in Frameworks */ = {isa = PBXBuildFile; productRef = 3F381ECB2796770000B6DB4F /* Amplitude */; };
 		3F381ED12796779300B6DB4F /* Loggings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F381ED02796779300B6DB4F /* Loggings.swift */; };
+		3F6BA01A279A53AA0096D4C3 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6BA019279A53AA0096D4C3 /* Fonts.swift */; };
+		3F6BA01E279A54030096D4C3 /* NotoSerifSC-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3F6BA01C279A54030096D4C3 /* NotoSerifSC-Bold.otf */; };
+		3F6BA01F279A54030096D4C3 /* NotoSerifSC-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3F6BA01D279A54030096D4C3 /* NotoSerifSC-Regular.otf */; };
+		3F6BA021279A558E0096D4C3 /* SettingsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6BA020279A558E0096D4C3 /* SettingsSheet.swift */; };
+		3F6BA023279A60540096D4C3 /* font-face.css in Resources */ = {isa = PBXBuildFile; fileRef = 3F6BA022279A60540096D4C3 /* font-face.css */; };
 		3FC596F426DAFDE7000C97BB /* main.bundle.js in Resources */ = {isa = PBXBuildFile; fileRef = 3FC596F226DAFDE7000C97BB /* main.bundle.js */; };
 		3FC596F526DAFDE7000C97BB /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 3FC596F326DAFDE7000C97BB /* index.html */; };
 		3FE1BFCB26DAEF5C006FCE49 /* WordMarkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE1BFCA26DAEF5C006FCE49 /* WordMarkApp.swift */; };
@@ -80,6 +85,11 @@
 		3F03915D278BE944005C05D7 /* ServiceListSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceListSheet.swift; sourceTree = "<group>"; };
 		3F2303E527839174005523F5 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		3F381ED02796779300B6DB4F /* Loggings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loggings.swift; sourceTree = "<group>"; };
+		3F6BA019279A53AA0096D4C3 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		3F6BA01C279A54030096D4C3 /* NotoSerifSC-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifSC-Bold.otf"; sourceTree = "<group>"; };
+		3F6BA01D279A54030096D4C3 /* NotoSerifSC-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifSC-Regular.otf"; sourceTree = "<group>"; };
+		3F6BA020279A558E0096D4C3 /* SettingsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSheet.swift; sourceTree = "<group>"; };
+		3F6BA022279A60540096D4C3 /* font-face.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = "font-face.css"; sourceTree = "<group>"; };
 		3FC596F226DAFDE7000C97BB /* main.bundle.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = main.bundle.js; sourceTree = "<group>"; };
 		3FC596F326DAFDE7000C97BB /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		3FE1BFC726DAEF5C006FCE49 /* WordMark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordMark.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +140,7 @@
 				3F0390AC278403D6005C05D7 /* PublishSheet.swift */,
 				3F0390AE27840692005C05D7 /* CreateSharingServiceSheet.swift */,
 				3F03915D278BE944005C05D7 /* ServiceListSheet.swift */,
+				3F6BA020279A558E0096D4C3 /* SettingsSheet.swift */,
 			);
 			path = Sheets;
 			sourceTree = "<group>";
@@ -137,9 +148,10 @@
 		3F0390D527842811005C05D7 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				3F6BA019279A53AA0096D4C3 /* Fonts.swift */,
 				3F381ED02796779300B6DB4F /* Loggings.swift */,
-				3F0390D627842811005C05D7 /* Extensions */,
 				3F0390DD27842811005C05D7 /* SharingProviders.swift */,
+				3F0390D627842811005C05D7 /* Extensions */,
 				3F0390DE27842811005C05D7 /* Services */,
 			);
 			name = Shared;
@@ -170,6 +182,25 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		3F6BA01B279A53F50096D4C3 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		3F6BA024279A616E0096D4C3 /* CM */ = {
+			isa = PBXGroup;
+			children = (
+				3FC596F326DAFDE7000C97BB /* index.html */,
+				3FC596F226DAFDE7000C97BB /* main.bundle.js */,
+				3F6BA022279A60540096D4C3 /* font-face.css */,
+				3F6BA01C279A54030096D4C3 /* NotoSerifSC-Bold.otf */,
+				3F6BA01D279A54030096D4C3 /* NotoSerifSC-Regular.otf */,
+			);
+			path = CM;
+			sourceTree = "<group>";
+		};
 		3FE1BFBE26DAEF5C006FCE49 = {
 			isa = PBXGroup;
 			children = (
@@ -194,9 +225,9 @@
 		3FE1BFC926DAEF5C006FCE49 /* WordMark */ = {
 			isa = PBXGroup;
 			children = (
+				3F6BA024279A616E0096D4C3 /* CM */,
+				3F6BA01B279A53F50096D4C3 /* fonts */,
 				3F0390B02784069A005C05D7 /* Sheets */,
-				3FC596F326DAFDE7000C97BB /* index.html */,
-				3FC596F226DAFDE7000C97BB /* main.bundle.js */,
 				3FE1BFCA26DAEF5C006FCE49 /* WordMarkApp.swift */,
 				3F0390A82783BCAE005C05D7 /* Persistence.swift */,
 				3FE1BFCC26DAEF5C006FCE49 /* WordMarkDocument.swift */,
@@ -350,9 +381,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FE1BFD426DAEF5D006FCE49 /* Preview Assets.xcassets in Resources */,
+				3F6BA023279A60540096D4C3 /* font-face.css in Resources */,
 				3FC596F526DAFDE7000C97BB /* index.html in Resources */,
+				3F6BA01F279A54030096D4C3 /* NotoSerifSC-Regular.otf in Resources */,
 				3FE1BFD126DAEF5D006FCE49 /* Assets.xcassets in Resources */,
 				3FC596F426DAFDE7000C97BB /* main.bundle.js in Resources */,
+				3F6BA01E279A54030096D4C3 /* NotoSerifSC-Bold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +411,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F6BA01A279A53AA0096D4C3 /* Fonts.swift in Sources */,
 				3F381ED12796779300B6DB4F /* Loggings.swift in Sources */,
 				3F03914E27842949005C05D7 /* String+Extensions.swift in Sources */,
 				3F03914F27842949005C05D7 /* URLRequest+Extensions.swift in Sources */,
@@ -397,6 +432,7 @@
 				3FE1BFCB26DAEF5C006FCE49 /* WordMarkApp.swift in Sources */,
 				3FE1BFCD26DAEF5C006FCE49 /* WordMarkDocument.swift in Sources */,
 				3FE1BFF826DAF33F006FCE49 /* EditorWebView.swift in Sources */,
+				3F6BA021279A558E0096D4C3 /* SettingsSheet.swift in Sources */,
 				3F0390A72783BC74005C05D7 /* WordMarkData.xcdatamodeld in Sources */,
 				3F2303E627839174005523F5 /* Alert.swift in Sources */,
 				3FE1BFCF26DAEF5C006FCE49 /* ContentView.swift in Sources */,

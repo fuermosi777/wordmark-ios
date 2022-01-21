@@ -71,8 +71,9 @@ class CMEditorWebView: WKWebView {
 }
 
 struct EditorWebView: UIViewRepresentable {
-  
   @Binding var content: String
+  
+  @AppStorage("regularFontFamily") private var regularFontFamily = Font.Default.rawValue
   
   init(content: Binding<String>) {
     _content = content
@@ -81,8 +82,12 @@ struct EditorWebView: UIViewRepresentable {
   class Coordinator: NSObject {
     let embedded: EditorWebView
     
+    var regularFontFamily: Int
+    
     init(_ embedded: EditorWebView) {
       self.embedded = embedded
+      
+      regularFontFamily = embedded.regularFontFamily
     }
   }
   
@@ -103,6 +108,10 @@ struct EditorWebView: UIViewRepresentable {
       if message.name == "Loaded" {
         let scriptToUpdateDoc = "ClientInitEditor(`\(embedded.content.toBase64())`);"
         self.uiView.evaluateJavaScript(scriptToUpdateDoc, completionHandler: nil);
+        
+        if let font = Font.init(rawValue: embedded.regularFontFamily) {
+          self.uiView.evaluateJavaScript("ClientUpdateFont('\(font.name)')", completionHandler: nil);
+        }
       } else if message.name == "DocChanged" {
         if message.body is String {
           // Update embedded webview's content.
@@ -125,7 +134,7 @@ struct EditorWebView: UIViewRepresentable {
   }
   
   
-  func makeUIView(context: Context) -> some UIView {
+  func makeUIView(context: Context) -> WKWebView {
     guard let fileURL = Bundle.main.url(forResource: kCodeMirrorFileName,
                                         withExtension: "html") else {
       return CMEditorWebView()
@@ -146,7 +155,13 @@ struct EditorWebView: UIViewRepresentable {
   }
   
   
-  func updateUIView(_ uiView: UIViewType, context: Context) {
-    
+  func updateUIView(_ uiView: WKWebView, context: Context) {
+    if context.coordinator.regularFontFamily != regularFontFamily {
+      guard let font = Font.init(rawValue: regularFontFamily) else { return }
+      print("ClientUpdateFont('\(font.name)');")
+      uiView.evaluateJavaScript("ClientUpdateFont('\(font.name)');",
+                                completionHandler: nil);
+      context.coordinator.regularFontFamily = regularFontFamily
+    }
   }
 }

@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'Noto Serif SC';
+  src: url('NotoSerifSC-Regular.otf') format('opentype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Noto Serif SC';
+  src: url('NotoSerifSC-Bold.otf') format('opentype');
+  font-weight: bold;
+}

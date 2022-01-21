@@ -114,5 +114,12 @@
 			</dict>
 		</dict>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>NotoSerifSC-Bold.otf</string>
+		<string>NotoSerifSC-Regular.otf</string>
+	</array>
+	<key>ATSApplicationFontsPath</key>
+	<string></string>
 </dict>
 </plist>
