@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>ATSApplicationFontsPath</key>
+	<string></string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDocumentTypes</key>
@@ -37,6 +39,11 @@
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>NotoSerifSC-Bold.otf</string>
+		<string>NotoSerifSC-Regular.otf</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -114,12 +121,5 @@
 			</dict>
 		</dict>
 	</array>
-	<key>UIAppFonts</key>
-	<array>
-		<string>NotoSerifSC-Bold.otf</string>
-		<string>NotoSerifSC-Regular.otf</string>
-	</array>
-	<key>ATSApplicationFontsPath</key>
-	<string></string>
 </dict>
 </plist>

@@ -21,11 +21,14 @@ struct ContentView: View {
   @Binding var document: WordMarkDocument
   @State private var selectedSheet: Sheet?
   
+  @AppStorage("hideNavigationBar") private var hideNavigationBar = false
+  
   var body: some View {
     NavigationView {
       VStack {
         EditorWebView(content: $document.text)
           .navigationTitle(document.filename ?? "")
+          .navigationBarHidden(hideNavigationBar)
           .navigationBarTitleDisplayMode(.inline)
           .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
@@ -54,6 +57,8 @@ struct ContentView: View {
             case .settings: SettingsSheet()
             }
           }
+      }.onTapGesture {
+        hideNavigationBar.toggle()
       }
     }
   }
