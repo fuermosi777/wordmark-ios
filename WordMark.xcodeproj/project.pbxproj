@@ -34,6 +34,7 @@
 		3F6BA01F279A54030096D4C3 /* NotoSerifSC-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3F6BA01D279A54030096D4C3 /* NotoSerifSC-Regular.otf */; };
 		3F6BA021279A558E0096D4C3 /* SettingsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6BA020279A558E0096D4C3 /* SettingsSheet.swift */; };
 		3F6BA023279A60540096D4C3 /* font-face.css in Resources */ = {isa = PBXBuildFile; fileRef = 3F6BA022279A60540096D4C3 /* font-face.css */; };
+		3F7F00B0279A9CF8009333CE /* KeyboardResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7F00AF279A9CF8009333CE /* KeyboardResponder.swift */; };
 		3FC596F426DAFDE7000C97BB /* main.bundle.js in Resources */ = {isa = PBXBuildFile; fileRef = 3FC596F226DAFDE7000C97BB /* main.bundle.js */; };
 		3FC596F526DAFDE7000C97BB /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 3FC596F326DAFDE7000C97BB /* index.html */; };
 		3FE1BFCB26DAEF5C006FCE49 /* WordMarkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE1BFCA26DAEF5C006FCE49 /* WordMarkApp.swift */; };
@@ -90,6 +91,7 @@
 		3F6BA01D279A54030096D4C3 /* NotoSerifSC-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifSC-Regular.otf"; sourceTree = "<group>"; };
 		3F6BA020279A558E0096D4C3 /* SettingsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSheet.swift; sourceTree = "<group>"; };
 		3F6BA022279A60540096D4C3 /* font-face.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = "font-face.css"; sourceTree = "<group>"; };
+		3F7F00AF279A9CF8009333CE /* KeyboardResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardResponder.swift; sourceTree = "<group>"; };
 		3FC596F226DAFDE7000C97BB /* main.bundle.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = main.bundle.js; sourceTree = "<group>"; };
 		3FC596F326DAFDE7000C97BB /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		3FE1BFC726DAEF5C006FCE49 /* WordMark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordMark.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -241,6 +243,7 @@
 				3F0390B327841093005C05D7 /* AuthWebView.swift */,
 				3F039159278699F3005C05D7 /* SharingServiceRow.swift */,
 				3F03915B27882606005C05D7 /* EnterMetadataView.swift */,
+				3F7F00AF279A9CF8009333CE /* KeyboardResponder.swift */,
 			);
 			path = WordMark;
 			sourceTree = "<group>";
@@ -420,6 +423,7 @@
 				3F03915227842949005C05D7 /* FocusedValues+Extensions.swift in Sources */,
 				3F03915327842949005C05D7 /* Date+Extensions.swift in Sources */,
 				3F03915427842949005C05D7 /* SharingProviders.swift in Sources */,
+				3F7F00B0279A9CF8009333CE /* KeyboardResponder.swift in Sources */,
 				3F03915C27882606005C05D7 /* EnterMetadataView.swift in Sources */,
 				3F03915A278699F3005C05D7 /* SharingServiceRow.swift in Sources */,
 				3F03915527842949005C05D7 /* MediumService.swift in Sources */,
@@ -595,7 +599,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_ASSET_PATHS = "\"WordMark/Preview Content\"";
 				DEVELOPMENT_TEAM = 8ZSXHVA72B;
 				ENABLE_PREVIEWS = YES;
@@ -619,7 +623,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_ASSET_PATHS = "\"WordMark/Preview Content\"";
 				DEVELOPMENT_TEAM = 8ZSXHVA72B;
 				ENABLE_PREVIEWS = YES;

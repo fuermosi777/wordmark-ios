@@ -23,11 +23,11 @@ class CMEditorWebView: WKWebView {
     
     let bold = UIBarButtonItem(image: UIImage(systemName: "bold"), style: .plain, target: self, action: #selector(self.insertBold(sender:)))
     let italic = UIBarButtonItem(image: UIImage(systemName: "italic"), style: .plain, target: self, action: #selector(self.insertItalic(sender:)))
-    let heading = UIBarButtonItem(title: "#", style: .plain, target: self, action: #selector(self.insertHeading(sender:)))
-    let hr = UIBarButtonItem(title: "---", style: .plain, target: self, action: #selector(self.insertHr(sender:)))
-    let link = UIBarButtonItem(image: UIImage(systemName: "globe"), style: .plain, target: self, action: #selector(self.insertLink(sender:)))
+    let heading = UIBarButtonItem(image: UIImage(systemName: "number"), style: .plain, target: self, action: #selector(self.insertHeading(sender:)))
+    let hr = UIBarButtonItem(image: UIImage(systemName: "trapezoid.and.line.horizontal"), style: .plain, target: self, action: #selector(self.insertHr(sender:)))
+    let link = UIBarButtonItem(image: UIImage(systemName: "link"), style: .plain, target: self, action: #selector(self.insertLink(sender:)))
     let image = UIBarButtonItem(image: UIImage(systemName: "photo"), style: .plain, target: self, action: #selector(self.insertImage(sender:)))
-    let keyboard = UIBarButtonItem(image: UIImage(systemName: "keyboard"), style: .plain, target: self, action: #selector(self.dismissKeyboard(sender:)))
+    let keyboard = UIBarButtonItem(image: UIImage(systemName: "keyboard.chevron.compact.down"), style: .plain, target: self, action: #selector(self.dismissKeyboard(sender:)))
     
     bar.items = [heading, bold, italic, link, image, hr, keyboard]
     bar.isUserInteractionEnabled = true
@@ -73,6 +73,8 @@ class CMEditorWebView: WKWebView {
 struct EditorWebView: UIViewRepresentable {
   @Binding var content: String
   
+  @AppStorage("editorFontSize") private var editorFontSize = 16.0
+  @AppStorage("styleActiveLine") private var styleActiveLine = false
   @AppStorage("regularFontFamily") private var regularFontFamily = Font.Default.rawValue
   
   init(content: Binding<String>) {
@@ -82,12 +84,16 @@ struct EditorWebView: UIViewRepresentable {
   class Coordinator: NSObject {
     let embedded: EditorWebView
     
+    var editorFontSize: Double
     var regularFontFamily: Int
+    var styleActiveLine: Bool
     
     init(_ embedded: EditorWebView) {
       self.embedded = embedded
       
+      editorFontSize = embedded.editorFontSize
       regularFontFamily = embedded.regularFontFamily
+      styleActiveLine = embedded.styleActiveLine
     }
   }
   
@@ -106,7 +112,7 @@ struct EditorWebView: UIViewRepresentable {
     
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
       if message.name == "Loaded" {
-        let scriptToUpdateDoc = "ClientInitEditor(`\(embedded.content.toBase64())`);"
+        let scriptToUpdateDoc = "ClientInitEditor(`\(embedded.content.toBase64())`);ClientToggleActiveLine(\(embedded.styleActiveLine));ClientUpdateFontSize(\(embedded.editorFontSize));"
         self.uiView.evaluateJavaScript(scriptToUpdateDoc, completionHandler: nil);
         
         if let font = Font.init(rawValue: embedded.regularFontFamily) {
@@ -156,6 +162,18 @@ struct EditorWebView: UIViewRepresentable {
   
   
   func updateUIView(_ uiView: WKWebView, context: Context) {
+    if context.coordinator.editorFontSize != editorFontSize {
+      uiView.evaluateJavaScript("ClientUpdateFontSize(\(editorFontSize));",
+                                completionHandler: nil);
+      context.coordinator.editorFontSize = editorFontSize
+    }
+    
+    if context.coordinator.styleActiveLine != styleActiveLine {
+      uiView.evaluateJavaScript("ClientToggleActiveLine(\(styleActiveLine));",
+                                completionHandler: nil);
+      context.coordinator.styleActiveLine = styleActiveLine
+    }
+    
     if context.coordinator.regularFontFamily != regularFontFamily {
       guard let font = Font.init(rawValue: regularFontFamily) else { return }
       print("ClientUpdateFont('\(font.name)');")

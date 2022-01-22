@@ -133,7 +133,10 @@ struct EnterMetadataView: View {
         .alert("Published successfully", isPresented: $presentSuccessAlert, actions: {
           Button("Close", action: { dismiss() })
           if let previewURL = previewURL {
-            Button("Preview", action: { openURL(previewURL) })
+            Button("Preview", action: {
+              openURL(previewURL)
+              dismiss()
+            })
           }
         })
         .alert("Error", isPresented: $presentErrorAlert, actions: {

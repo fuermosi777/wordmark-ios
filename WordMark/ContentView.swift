@@ -18,17 +18,26 @@ enum Sheet: Identifiable {
 }
 
 struct ContentView: View {
+  @ObservedObject private var keyboard = KeyboardResponder()
   @Binding var document: WordMarkDocument
   @State private var selectedSheet: Sheet?
   
-  @AppStorage("hideNavigationBar") private var hideNavigationBar = false
+  @AppStorage("hideNavWhenEditing") private var hideNavWhenEditing = false
+  
+  private func shouldHideNav() -> Bool {
+    if !hideNavWhenEditing {
+      return false
+    }
+    return keyboard.isVisible
+  }
   
   var body: some View {
     NavigationView {
       VStack {
         EditorWebView(content: $document.text)
           .navigationTitle(document.filename ?? "")
-          .navigationBarHidden(hideNavigationBar)
+        // TODO: deprecate animation.
+          .navigationBarHidden(shouldHideNav()).animation(.easeInOut(duration: 0.2))
           .navigationBarTitleDisplayMode(.inline)
           .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
@@ -57,8 +66,6 @@ struct ContentView: View {
             case .settings: SettingsSheet()
             }
           }
-      }.onTapGesture {
-        hideNavigationBar.toggle()
       }
     }
   }
