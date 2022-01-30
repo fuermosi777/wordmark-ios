@@ -13,7 +13,6 @@ struct SettingsSheet: View {
   @AppStorage("regularFontFamily") private var regularFontFamily = Font.Default.rawValue
   @AppStorage("editorFontSize") private var editorFontSize = 16.0
   @AppStorage("styleActiveLine") private var styleActiveLine = false
-  @AppStorage("hideNavWhenEditing") private var hideNavWhenEditing = false
 
   
   var body: some View {
@@ -31,7 +30,6 @@ struct SettingsSheet: View {
               Slider(value: $editorFontSize, in: 12...24)
             }
             
-            Toggle("Hide Title When Typing", isOn: $hideNavWhenEditing)
             Toggle("Highlight Active Line", isOn: $styleActiveLine)
         }
       }

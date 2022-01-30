@@ -27,9 +27,15 @@ class CMEditorWebView: WKWebView {
     let hr = UIBarButtonItem(image: UIImage(systemName: "trapezoid.and.line.horizontal"), style: .plain, target: self, action: #selector(self.insertHr(sender:)))
     let link = UIBarButtonItem(image: UIImage(systemName: "link"), style: .plain, target: self, action: #selector(self.insertLink(sender:)))
     let image = UIBarButtonItem(image: UIImage(systemName: "photo"), style: .plain, target: self, action: #selector(self.insertImage(sender:)))
+    let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
     let keyboard = UIBarButtonItem(image: UIImage(systemName: "keyboard.chevron.compact.down"), style: .plain, target: self, action: #selector(self.dismissKeyboard(sender:)))
     
-    bar.items = [heading, bold, italic, link, image, hr, keyboard]
+    bar.items = [heading, bold, italic, link, image, hr, spacer]
+    
+    if UIDevice.current.userInterfaceIdiom == .phone {
+      bar.items?.append(keyboard)
+    }
+    
     bar.isUserInteractionEnabled = true
 //    bar.sizeToFit()
     return bar
@@ -116,7 +122,7 @@ struct EditorWebView: UIViewRepresentable {
         self.uiView.evaluateJavaScript(scriptToUpdateDoc, completionHandler: nil);
         
         if let font = Font.init(rawValue: embedded.regularFontFamily) {
-          self.uiView.evaluateJavaScript("ClientUpdateFont('\(font.name)')", completionHandler: nil);
+          self.uiView.evaluateJavaScript("ClientUpdateFont('\(font.familyName)')", completionHandler: nil);
         }
       } else if message.name == "DocChanged" {
         if message.body is String {
@@ -150,6 +156,10 @@ struct EditorWebView: UIViewRepresentable {
     webview.loadFileURL(fileURL, allowingReadAccessTo: fileURL)
     webview.allowsLinkPreview = false
     
+    // A workaround to fix webview scrolling issue when keyboard appears.
+    // https://rick38yip.medium.com/wkwebview-weird-spacing-issue-in-ios-13-54a4fc686f72
+    webview.scrollView.contentInsetAdjustmentBehavior = .never
+    
     // Register communication event names.
     webview.configuration.userContentController.add(MessageHandler(self, webview), name: "Loaded")
     webview.configuration.userContentController.add(MessageHandler(self, webview), name: "DocChanged")
@@ -176,8 +186,7 @@ struct EditorWebView: UIViewRepresentable {
     
     if context.coordinator.regularFontFamily != regularFontFamily {
       guard let font = Font.init(rawValue: regularFontFamily) else { return }
-      print("ClientUpdateFont('\(font.name)');")
-      uiView.evaluateJavaScript("ClientUpdateFont('\(font.name)');",
+      uiView.evaluateJavaScript("ClientUpdateFont('\(font.familyName)');",
                                 completionHandler: nil);
       context.coordinator.regularFontFamily = regularFontFamily
     }
